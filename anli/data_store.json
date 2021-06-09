@@ -1,0 +1,26 @@
+{
+    "mnli_m_dev": {
+        "orig": "data/build/mnli/m_dev.jsonl"
+    },
+    "mnli_mm_dev": {
+        "orig": "data/build/mnli/mm_dev.jsonl"
+    },
+    "snli_dev": {
+        "orig": "data/build/snli/dev.jsonl"
+    },
+    "snli_test": {
+        "orig": "data/build/snli/test.jsonl"
+    },
+    "anli_r1_dev": {
+        "orig": "data/build/anli/r1/dev.jsonl"
+    },
+    "anli_r2_dev": {
+        "orig": "data/build/anli/r2/dev.jsonl"
+    },
+    "anli_r3_dev": {
+        "orig": "data/build/anli/r3/dev.jsonl"
+    },
+    "ocnli_dev": {
+        "orig": "data/build/ocnli/dev.jsonl"
+    }
+}

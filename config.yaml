@@ -1,0 +1,210 @@
+data_path: anli/data
+outp_path: data/
+eval_data: mnli_m_dev
+batch_size: 128
+hyp_distinct_perm: True
+prem_distinct_perm: True
+load_model: False
+rand_data_folder: ''  # override folder_name
+data_prep_config:
+  num_tries: 100
+  percent: 1.0
+  keep_order: 0.0
+  retain_stop: False
+  retain_punct: True
+  save_data: True
+  rebuild: False
+  keep_premise: False
+  lang: "en"
+mnli_train:
+  orig_path: build/mnli/train.jsonl
+  id_map:
+    entailment_id: 2
+    contradiction_id: 0
+    neutral_id: 1
+mnli_m_dev:
+  orig_path: build/mnli/m_dev.jsonl
+  sent1_label: premise
+  sent2_label: hypothesis
+  index_label: uid
+  target_label: label
+  id_map:
+    entailment_id: 2
+    contradiction_id: 0
+    neutral_id: 1
+mnli_mm_dev:
+  orig_path: build/mnli/mm_dev.jsonl
+  id_map:
+    entailment_id: 2
+    contradiction_id: 0
+    neutral_id: 1
+snli_dev:
+  orig_path: build/snli/dev.jsonl
+  id_map:
+    entailment_id: 2
+    contradiction_id: 0
+    neutral_id: 1
+snli_test:
+  orig_path: build/snli/test.jsonl
+  id_map:
+    entailment_id: 2
+    contradiction_id: 0
+    neutral_id: 1
+anli_r1_dev:
+  orig_path: build/anli/r1/dev.jsonl
+  id_map:
+    entailment_id: 2
+    contradiction_id: 0
+    neutral_id: 1
+anli_r2_dev:
+  orig_path: build/anli/r2/dev.jsonl
+  id_map:
+    entailment_id: 2
+    contradiction_id: 0
+    neutral_id: 1
+anli_r3_dev:
+  orig_path: build/anli/r3/dev.jsonl
+  id_map:
+    entailment_id: 2
+    contradiction_id: 0
+    neutral_id: 1
+rte_dev:
+  orig_path: lib/fairseq/glue_data/RTE/processed
+  sent1_label: sentence1
+  sent2_label: sentence2
+  index_label: index
+  target_label: target
+qqp_dev:
+  orig_path: lib/fairseq/glue_data/QQP/processed
+  sent1_label: sentence1
+  sent2_label: sentence2
+  index_label: index
+  target_label: target
+qnli_dev:
+  orig_path: lib/fairseq/glue_data/QNLI/processed
+  sent1_label: sentence1
+  sent2_label: sentence2
+  index_label: index
+  target_label: target
+ocnli_dev:
+  orig_path: build/ocnli/dev.jsonl
+model_type: hub
+hub:
+  git_repo: pytorch/fairseq
+  model_name: roberta.large.mnli
+hf_mnli_distilbert:
+  train_data: mnli
+  train_mode: orig
+  model_name: distilbert
+  id_map:
+    entailment_id: 0
+    contradiction_id: 2
+    neutral_id: 1
+hf_ocnli_roberta:
+  train_data: ocnli
+  train_mode: orig
+  model_name: chinese-roberta-large
+  id_map:
+    entailment_id: 0
+    contradiction_id: 2
+    neutral_id: 1
+rnn_infersent:
+  model_name: infersent
+  encoder_type: InferSent
+  train_data: ocnli
+  train_mode: orig
+  id_map:
+    entailment_id: 0
+    contradiction_id: 1
+    neutral_id: 2
+rnn_convnet:
+  model_name: convnet
+  encoder_type: ConvNetEncoder
+  train_data: ocnli
+  train_mode: orig
+  id_map:
+    entailment_id: 0
+    contradiction_id: 1
+    neutral_id: 2
+rnn_bilstm:
+  model_name: bilstm
+  encoder_type: BLSTMprojEncoder
+  train_data: mnli
+rnn_blstmprojencoder:
+  model_name: blstmprojencoder
+  encoder_type: BLSTMprojEncoder
+  train_data: mnli
+  train_mode: orig
+  id_map:
+    entailment_id: 0
+    contradiction_id: 1
+    neutral_id: 2
+rnn_bgrulastencoder:
+  model_name: bgrulastencoder
+  encoder_type: BGRUlastEncoder
+  train_data: ocnli
+  train_mode: orig
+  id_map:
+    entailment_id: 0
+    contradiction_id: 1
+    neutral_id: 2
+rnn_innerattentionmila:
+  model_name: innerattentionmilaencoder
+  encoder_type: InnerAttentionMILAEncoder
+  train_data: ocnli
+  train_mode: orig
+  id_map:
+    entailment_id: 0
+    contradiction_id: 1
+    neutral_id: 2
+rnn_innerattentionnaacl:
+  model_name: innerattentionnaaclencoder
+  encoder_type: InnerAttentionNAACLEncoder
+  train_data: ocnli
+  train_mode: orig
+  id_map:
+    entailment_id: 0
+    contradiction_id: 1
+    neutral_id: 2
+rnn_lstmencoder:
+  model_name: lstmencoder
+  encoder_type: LSTMEncoder
+  train_data: ocnli
+  train_mode: orig
+  id_map:
+    entailment_id: 0
+    contradiction_id: 1
+    neutral_id: 2
+rnn_infersent_rand:
+  outputdir: savedir_mnli_rand
+  nlipath: mnli_rand
+  model_name: infersent
+  encoder_type: InferSent
+  train_data: mnli
+  train_mode: orig
+  id_map:
+    entailment_id: 0
+    contradiction_id: 1
+    neutral_id: 2
+rnn_convnet_rand:
+  outputdir: savedir_mnli_rand
+  nlipath: mnli_rand
+  model_name: convnet
+  encoder_type: ConvNetEncoder
+  train_data: mnli
+  train_mode: orig
+  id_map:
+    entailment_id: 0
+    contradiction_id: 1
+    neutral_id: 2
+rnn_blstmprojencoder_rand:
+  outputdir: savedir_mnli_rand
+  nlipath: mnli_rand
+  model_name: blstmprojencoder
+  encoder_type: BLSTMprojEncoder
+  train_data: mnli
+  train_mode: orig
+  id_map:
+    entailment_id: 0
+    contradiction_id: 1
+    neutral_id: 2

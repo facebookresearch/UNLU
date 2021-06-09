@@ -1,0 +1,13 @@
+pytorch-lightning==1.0.2
+test-tube==0.7.5
+torchtext==0.8.0
+submitit==1.1.1
+spacy==2.3.2
+ray==1.0.0
+gdown==3.12.2
+addict==2.4.0
+scipy==1.5.4
+hydra-core==1.0.4
+regex==2020.11.13
+transformers==3.3.1
+ray==1.0.1.post1
