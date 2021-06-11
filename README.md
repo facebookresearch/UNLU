@@ -188,6 +188,14 @@ If you find our work useful in your research, please cite us using the following
 - We thank the amazing [ANLI repository](https://github.com/facebookresearch/anli), which we use for various prototyping and experiments.
 - We also use the [InferSent](https://github.com/facebookresearch/InferSent) repository for non-Transformer experiments
 
+## Terms of Use
+
+https://opensource.facebook.com/legal/terms
+
+## Privacy Policy
+
+https://opensource.facebook.com/legal/privacy
+
 ## License
 
 UNLU is licensed under Creative Commons-Non Commercial 4.0. See the LICENSE file for more details.
